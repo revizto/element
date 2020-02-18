@@ -11,6 +11,7 @@
     }">
     <slot>
       <span>{{ currentLabel }}</span>
+      <span v-if="created" class="newElementHint"> {{newElementHint}} </span>
     </slot>
   </li>
 </template>
@@ -33,6 +34,7 @@
         required: true
       },
       label: [String, Number],
+      newElementHint: [String, Number],
       created: Boolean,
       disabled: {
         type: Boolean,

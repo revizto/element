@@ -118,6 +118,7 @@
           <el-option
             :value="query"
             created
+            :newElementHint="newElementHint"
             v-if="showNewOption">
           </el-option>
           <slot></slot>
@@ -302,7 +303,8 @@
       popperAppendToBody: {
         type: Boolean,
         default: true
-      }
+      },
+      newElementHint: String
     },
 
     data() {
